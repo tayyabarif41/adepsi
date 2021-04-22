@@ -1,0 +1,76 @@
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: white;
+  justify-content: space-between;
+}
+.appLogo {
+  height: 100%;
+  width: 113px;
+  background-color: #349CC8;
+  position: relative;
+}
+.appLogo>img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.items {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+}
+.infoSection {
+  display: flex;
+  cursor: pointer;
+  height: 100%;
+}
+.name {
+  font-size: 18px;
+  color: #3c4565;
+  max-width: 150px;
+}
+.name > div {
+  font-size: 14px;
+  color: #a8aab7;
+  max-width: 150px;
+  text-align: right;
+}
+.avatar {
+  margin: auto 20px;
+}
+.dropDownIcon {
+  margin-left: 20px;
+}
+.materialIconColor {
+  color: #a8aab7;
+  vertical-align: bottom;
+}
+.notification {
+  margin: auto 35px;
+  cursor: pointer;
+}
+.seperator {
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #ced0d1;
+}
+.search {
+  margin: auto 20px;
+  cursor: pointer;
+}
+.search > span {
+  color: #4a4cf9 !important;
+}
+
+:host ::ng-deep .mat-badge-content{
+  background: #349CC8;
+}

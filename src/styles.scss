@@ -1,0 +1,50 @@
+html,
+body {
+	height: 100%;
+	max-width: 2200px;
+	margin: auto;
+}
+body {
+	margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.font-black {
+  font-family: Lato-Black !important;
+}
+.font-medium {
+  font-family: Lato-Medium !important;
+}
+.font-light {
+  font-family: Lato-Light !important;
+}
+.font-bold {
+  font-family: Lato-Bold !important;
+}
+
+.marginAuto {
+  margin: auto 0px;
+}
+.textOverflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-container{
+  width: 100%;
+  height: 100%;
+}
+button{
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background: transparent;
+}
+
+*,*:focus,*:hover{
+    outline:none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

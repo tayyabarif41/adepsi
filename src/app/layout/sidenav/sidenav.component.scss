@@ -1,0 +1,33 @@
+.main-container {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.routing-wrapper{
+  width: 100%;
+  padding-top: 40px;
+}
+.icon {
+  text-align: center;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+button{
+  height: 50px;
+  width: 50px;
+}
+svg{
+  vertical-align: middle;
+  cursor: pointer;
+}
+.active-link{
+  background: #349cc8;
+  border-radius: 50%;
+  padding: 1px;
+}
+.active{
+  fill: white;
+}

@@ -1,0 +1,21 @@
+.header{
+    font-size: 28px;
+}
+.card-body{
+    height: calc(100% - 35px);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.title{
+    color: #349CC8;
+    font-size: 24px;
+}
+.info-section{
+    padding: 35px 0px 0px 12px;
+}
+.value{
+    font-size: 28px;
+}

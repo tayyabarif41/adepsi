@@ -1,0 +1,27 @@
+.main-container {
+  display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow-y: hidden;
+}
+.header {
+  height: 80px;
+  border-bottom: 1px solid #ced0d1;
+}
+.main-body {
+  height: calc(100% - 81px);
+  background: red;
+}
+.example-container {
+  height: 100%;
+  width: 100%;
+}
+.main-content {
+	min-width: 1200px;
+	width: 100%;
+	height: 100%;
+}
+:host ::ng-deep .mat-drawer-inner-container {
+  width: 113px;
+}
