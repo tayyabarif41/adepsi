@@ -1,0 +1,33 @@
+.header{
+    font-size: 28px;
+}
+.card-body{
+    height: calc(100% - 35px);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 30px 14px 0px 14px;
+}
+.section-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-image{
+    width: 100%;
+    height: auto;
+}
+.section-value{
+    font-size: 40px;
+}
+.red{
+    color: #FF4B23;
+}
+.green{
+    color: #27A971;
+}
+.blue{
+    color: #349CC8;
+}

@@ -26,17 +26,17 @@ export class RecordCallsComponent implements OnInit, AfterViewInit {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
           label: '# of Votes',
-          data: [12, 19],
+          data: [75, 25],
           backgroundColor: [
-            '#CCE6F1',
             '#349CC8',
+            '#CCE6F1',
           ],
           borderWidth: 0
         }]
       },
       options: {
         responsive: true,
-        cutout: 70,
+        cutout: 80,
         maintainAspectRatio: false,
         plugins: {
           legend: {
