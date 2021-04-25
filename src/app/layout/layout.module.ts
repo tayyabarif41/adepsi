@@ -8,6 +8,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatRippleModule } from '@angular/material/core';
 // Import your AvatarModule
 import { AvatarModule } from 'ngx-avatar';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,10 +21,6 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'dashboard'
-      },
-      {
-        path: 'dashboard',
         loadChildren: () => import('src/app/pages/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
@@ -56,7 +53,8 @@ const routes: Routes = [
     MatSidenavModule,
     HttpClientModule,
     AvatarModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatRippleModule
   ]
 })
 export class LayoutModule { }

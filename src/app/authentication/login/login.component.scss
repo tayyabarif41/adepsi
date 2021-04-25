@@ -1,0 +1,65 @@
+.main-container{
+    background: #349CC8;
+}
+.form-wrapper{
+     width: 90%;
+    max-width: 1648px;
+    height: 708px;
+    border-radius: 15px;
+    background-image: url(/assets/icons/logon-page-background.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form{
+    height: 100%;
+    z-index: 2;
+    padding: 100px;
+    width: 400px;
+    padding-right: 0px;
+}
+.logo{
+    margin-bottom: 50px;
+}
+.title{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+.tag-line{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 26px;
+}
+.login-from{
+    width: 100%;
+}
+.row{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.color-white{
+    color: white !important;
+}
+.checkbox{
+    margin-right: 86px;
+}
+.submit-btn{
+    text-align: center;
+}
+:host ::ng-deep .mat-form-field-infix{
+    width: 285px;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+}
+:host ::ng-deep .mat-checkbox-layout .mat-checkbox-label{
+    color: white;
+    margin-top: 1px;
+}
+:host :ng-deep .mat-checkbox-layout .mat-checkbox-label{
+    line-height: unset;
+}
+:host ::ng-deep mat-label{
+    font-size: 12px;
+}

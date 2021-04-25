@@ -1,33 +1,66 @@
 <div class="mainContainer">
+    <!-- Application Logo -->
     <div class="appLogo">
         <img src="assets/icons/logo.svg" alt="">
     </div>
+    <!-- Header -->
     <div class="header marginAuto">
         <div class="items">
             <!-- Profile Info -->
-            <div class="infoSection">
+            <div class="info-section" (click)="activateDropdown(); $event.stopPropagation()"
+                [ngClass]="{'dropdown-active': (dropdown)}">
+                <!-- Avatar UI -->
                 <div class="avatar">
-                    <ngx-avatar bgColor="#349CC8" fgColor="white" [size]="50" name="Tayyab Arif" value="75%">
+                    <ngx-avatar [bgColor]="bgColor" [fgColor]="fgColor" [size]="50" name="Tayyab Arif" value="75%">
                     </ngx-avatar>
                 </div>
-                <div class="name marginAuto fontBlack textOverflow">
+                <!-- Name and Designation -->
+                <div class="name marginAuto textOverflow font-bold" [ngClass]="{'color-white': (dropdown)}">
                     Tayyab Arif
                     <br>
-                    <div class="fontMedium textOverflow">UI Developer</div>
+                    <div class="fontMedium textOverflow font-medium" [ngClass]="{'color-white': (dropdown)}">
+                        UI Developer asdasdas
+                    </div>
                 </div>
+                <!-- Up, Down Arrows -->
                 <div class="marginAuto">
-                    <span class="material-icons dropDownIcon materialIconColor"> keyboard_arrow_down </span>
+                    <span class="material-icons dropDownIcon" [ngClass]="{'color-white': (dropdown)}">
+                        {{dropdown === true ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}
+                    </span>
+                </div>
+                <!-- Profile Dropdown -->
+                <div *ngIf="dropdown" class="info-section-dropdown font-medium" (click)="$event.stopPropagation()">
+                    <!-- Settings Row -->
+                    <div class="row" mat-ripple (click)="routeToSettings(); $event.stopPropagation()">
+                        <div class="marginAuto mr-5">
+                            <span class="material-icons"> settings </span>
+                        </div>
+                        <div class="marginAuto">
+                            <span>Account Settings</span>
+                        </div>
+                    </div>
+                    <!-- Logout Row -->
+                    <div class="row" mat-ripple (click)="logout()">
+                        <div class="marginAuto mr-5">
+                            <span class="material-icons"> logout </span>
+                        </div>
+                        <div class="marginAuto">
+                            <span>Logout</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <!-- Seperator -->
-            <div class="seperator"></div>
+            <!-- <div class="seperator"></div> -->
+
             <!-- Notification -->
             <div class="notification">
                 <span matBadge="5" matBadgeSize="small" class="material-icons materialIconColor">
                     notifications_none </span>
             </div>
             <!-- Seperator -->
-            <div class="seperator"></div>
+            <!-- <div class="seperator"></div> -->
         </div>
     </div>
 </div>

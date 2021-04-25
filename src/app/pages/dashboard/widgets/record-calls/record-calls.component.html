@@ -4,15 +4,26 @@
         <span>Recorded Calls</span>
     </div>
     <!-- Body Of Card -->
-    <div class="card-body">
+    <div class="card-body position-relative">
+        <!-- Loader -->
+        <div class="position-middle" *ngIf="loading">
+            <app-custom-spinner></app-custom-spinner>
+        </div>
+        <!-- Chart -->
         <div class="row">
-            <div class="info-section">
-                <span class="title font-medium">Total Calls Recorded</span>
-                <br><br>
-                <span class="value font-black">10,341</span>
+            <div class="info-section" *ngIf="!loading">
+                <div>
+                    <span class="title font-medium">Total Calls Recorded</span>
+                </div>
+                <div>
+                    <span class="value font-black">10,341</span>
+                </div>
             </div>
             <div class="chart">
                 <canvas id="myChart"></canvas>
+                <div class="chart-inner-value">
+                    <span class="value font-black" *ngIf="!loading">10,341</span>
+                </div>
             </div>
         </div>
     </div>

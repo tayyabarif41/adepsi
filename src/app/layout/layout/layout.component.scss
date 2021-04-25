@@ -7,7 +7,7 @@
 }
 .header {
   height: 80px;
-  border-bottom: 1px solid #ced0d1;
+  // border-bottom: 1px solid #ced0d1;
 }
 .main-body {
   height: calc(100% - 81px);
@@ -19,9 +19,14 @@
 }
 .main-content {
 	min-width: 1200px;
+  max-width: 2200px;
 	width: 100%;
 	height: 100%;
+  margin: auto;
 }
 :host ::ng-deep .mat-drawer-inner-container {
   width: 113px;
+}
+:host ::ng-deep .mat-drawer-side{
+  border: none !important;
 }

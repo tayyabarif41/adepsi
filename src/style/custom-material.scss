@@ -1,0 +1,17 @@
+// material icon vertical allignement 
+.material-icons{
+  vertical-align: middle;
+}
+// ------------------------------- Mat Checkbox Css -------------------------------- //
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+    background: transparent;
+}
+.mat-checkbox-frame{
+  border-color: white;
+}
+::ng-deep .mat-checkbox-inner-container{
+	margin:auto 0px;
+	margin-right: 10px;
+}
+// ------------------------------- Mat checkbox Css Ends --------------------------- //

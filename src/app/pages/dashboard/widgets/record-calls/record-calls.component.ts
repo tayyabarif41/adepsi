@@ -8,6 +8,7 @@ import { Chart, registerables } from 'chart.js';
 export class RecordCallsComponent implements OnInit, AfterViewInit {
   ctx: any;
   myChart: any;
+  loading: boolean = false;
   constructor() {
     Chart.register(...registerables);
   }
@@ -16,7 +17,11 @@ export class RecordCallsComponent implements OnInit, AfterViewInit {
 
   }
   ngAfterViewInit() {
-    this.drawChart()
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+      this.drawChart();
+    }, 1000);
   }
   drawChart() {
     this.ctx = document.getElementById('myChart');
@@ -26,17 +31,17 @@ export class RecordCallsComponent implements OnInit, AfterViewInit {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
           label: '# of Votes',
-          data: [12, 19],
+          data: [75, 25],
           backgroundColor: [
-            '#CCE6F1',
             '#349CC8',
+            '#CCE6F1',
           ],
           borderWidth: 0
         }]
       },
       options: {
         responsive: true,
-        cutout: 70,
+        cutout: 80,
         maintainAspectRatio: false,
         plugins: {
           legend: {

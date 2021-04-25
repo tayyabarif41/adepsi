@@ -1,1 +1,43 @@
-<p>statistics works!</p>
+<div class="main-container">
+    <!-- Header of Card -->
+    <div class="header font-black">
+        <span>Statistics</span>
+    </div>
+    <!-- Body Of Card -->
+    <div class="card-body position-relative">
+        <!-- Loader -->
+        <div class="position-middle" *ngIf="loading">
+            <app-custom-spinner></app-custom-spinner>
+        </div>
+        <!-- Chart -->
+        <div class="row" *ngIf="!loading">
+            <!-- Conference -->
+            <div class="section-wrapper">
+                <div class="section-image">
+                    <img src="assets/icons/call-blue.svg" alt="">
+                </div>
+                <div class="section-value">
+                    <span class="font-black blue">1356</span>
+                </div>
+            </div>
+            <!-- Inobund -->
+            <div class="section-wrapper">
+                <div class="section-image">
+                    <img src="assets/icons/call-green.svg" alt="">
+                </div>
+                <div class="section-value">
+                    <span class="font-black green">6850</span>
+                </div>
+            </div>
+            <!-- Outbound -->
+            <div class="section-wrapper">
+                <div class="section-image">
+                    <img src="assets/icons/call-red.svg" alt="">
+                </div>
+                <div class="section-value">
+                    <span class="font-black red">2135</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

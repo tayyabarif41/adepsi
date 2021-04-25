@@ -1,15 +1,17 @@
-html,
-body {
+@import "./style/custom-material.scss";
+@import "./style/design-system.scss";
+
+html, body {
 	height: 100%;
-	max-width: 2200px;
 	margin: auto;
 }
+
 body {
 	margin: 0;
 }
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+
+
+// fonts
 .font-black {
   font-family: Lato-Black !important;
 }
@@ -22,29 +24,23 @@ body {
 .font-bold {
   font-family: Lato-Bold !important;
 }
+.font-regular {
+  font-family: Lato-Regular !important;
+}
 
-.marginAuto {
-  margin: auto 0px;
-}
-.textOverflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.main-container{
-  width: 100%;
-  height: 100%;
-}
+// Removing default properties of button
 button{
   margin: 0px;
   padding: 0px;
   border: none;
   background: transparent;
 }
-
+// This property will remove border when you click on an input or button
 *,*:focus,*:hover{
     outline:none;
 }
+// It will make avery element an border box element on which padding and margin will work properly
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
