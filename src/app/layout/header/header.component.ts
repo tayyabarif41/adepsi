@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener("document:click", ["$event"]) onDocumentClick(event: any) {
     this.dropdown = false;
+    this.resetColor()
   }
 
   constructor(private router: Router) { }

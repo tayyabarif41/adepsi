@@ -27,6 +27,10 @@ export class AverageCallLengthComponent implements OnInit {
   }
   drawChart() {
     this.ctx = document.getElementById('averageCallLength');
+    this.ctx = this.ctx.getContext("2d");
+    let gradient = this.ctx.createLinearGradient(0, 0, 0, 150);
+    gradient.addColorStop(1, 'rgba(0,151,207,1)');
+    gradient.addColorStop(0, 'rgba(255,255,255, 0)');
     this.myChart = new Chart(this.ctx, {
       type: 'bar',
       data: {
@@ -38,9 +42,7 @@ export class AverageCallLengthComponent implements OnInit {
           borderColor: 'transparent',
           borderWidth: 2,
           data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: [
-            '#349CC8',
-          ],
+          backgroundColor: gradient
         }, {
           label: 'Product B',
           borderRadius: 10,
@@ -48,9 +50,7 @@ export class AverageCallLengthComponent implements OnInit {
           data: [28, 48, 40, 19, 86, 27, 90],
           borderWidth: 2,
           barThickness: 20,
-          backgroundColor: [
-            '#349CC8',
-          ]
+          backgroundColor: gradient
         }
         ],
       },
