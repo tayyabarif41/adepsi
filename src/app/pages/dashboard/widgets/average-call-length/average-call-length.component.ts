@@ -28,31 +28,12 @@ export class AverageCallLengthComponent implements OnInit {
   drawChart() {
     this.ctx = document.getElementById('averageCallLength');
     this.ctx = this.ctx.getContext("2d");
-    let gradient = this.ctx.createLinearGradient(0, 0, 0, 150);
-    gradient.addColorStop(1, 'rgba(0,151,207,1)');
-    gradient.addColorStop(0, 'rgba(255,255,255, 0)');
+
     this.myChart = new Chart(this.ctx, {
       type: 'bar',
       data: {
-        labels: ['2004', '2006', '2008', '2010', '2012', '2014', '2016',],
-        datasets: [{
-          label: '# of Votes',
-          barThickness: 20,
-          borderRadius: 10,
-          borderColor: 'transparent',
-          borderWidth: 2,
-          data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: gradient
-        }, {
-          label: 'Product B',
-          borderRadius: 10,
-          borderColor: 'transparent',
-          data: [28, 48, 40, 19, 86, 27, 90],
-          borderWidth: 2,
-          barThickness: 20,
-          backgroundColor: gradient
-        }
-        ],
+        labels: ['2004', '2006', '2008', '2010', '2012', '2014', '2016'],
+        datasets: this.setData(),
       },
       options: {
         responsive: true,
@@ -80,5 +61,32 @@ export class AverageCallLengthComponent implements OnInit {
         }
       }
     })
+  }
+  setData() {
+    let gradient = this.ctx.createLinearGradient(0, 0, 0, 150);
+    gradient.addColorStop(1, 'rgba(0,151,207,1)');
+    gradient.addColorStop(0, 'rgba(255,255,255, 0)');
+    let arr = []
+    for (let i = 0; i < 10; i++) {
+      let obj = {
+        label: 'Test' + i,
+        borderRadius: 10,
+        borderColor: 'transparent',
+        borderWidth: 2,
+        data: this.getRandomData(),
+        backgroundColor: gradient
+      }
+      arr.push(obj)
+    }
+
+    return arr
+  }
+  getRandomData() {
+    let arr = [];
+    for (let j = 0; j < 8; j++) {
+      let random = Math.random() * (100 - 0) + 0;
+      arr.push(random)
+    }
+    return arr
   }
 }

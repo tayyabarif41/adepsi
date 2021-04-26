@@ -1,0 +1,29 @@
+<div class="main-container">
+    <!-- Header contains filter search and refresh -->
+    <div class="header d-flex justify-space-between">
+        <div>
+            <button class="filter-btn font-medium d-flex" mat-ripple (click)="filterDropdown = !filterDropdown"
+                [ngClass]="{'bow-shadow-blue': (filterDropdown)}">
+                <div class="margin-auto">FILTERS</div>
+                <div class="margin-auto">
+                    <span class="material-icons" [ngClass]="{'filter-btn-active': (filterDropdown)}">
+                        {{filterDropdown === true ? 'arrow_drop_up' : 'arrow_drop_down'}}
+                    </span>
+                </div>
+            </button>
+        </div>
+        <div class="d-flex">
+            <div class="margin-auto">
+                <button class="search-btn" mat-ripple><span class="material-icons"> search </span></button>
+            </div>
+            <div class="invisible-seperator"></div>
+            <div class="margin-auto">
+                <button class="refresh-btn" mat-ripple><span class="material-icons"> refresh </span></button>
+            </div>
+        </div>
+    </div>
+    <!-- Filters Section -->
+    <div class="filters" *ngIf="filterDropdown">
+
+    </div>
+</div>

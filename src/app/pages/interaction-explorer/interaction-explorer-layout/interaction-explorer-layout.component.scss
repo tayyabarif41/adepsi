@@ -1,0 +1,36 @@
+.main-container{
+    padding: 20px;
+}
+
+.filter-btn{
+    width: 112px;
+    height: 44px;
+    border-radius: 5px;
+    background: white;
+    color: #9EA2A4;
+
+}
+.filter-btn-active{
+    color: #349CC8;
+}
+.bow-shadow-blue{
+    box-shadow: 0px 2px 8px #349cc859;
+}
+.refresh-btn{
+    width: 44px;
+    height: 44px;
+    background: #C5DFEB;
+    border-radius: 3px;
+}
+.search-btn{
+    width: 44px;
+    height: 44px;
+    border-radius: 3px;
+}
+.search-btn>span{
+    color: #349CC8;
+}
+.filters{
+    width: 100%;
+    display: flex;
+}

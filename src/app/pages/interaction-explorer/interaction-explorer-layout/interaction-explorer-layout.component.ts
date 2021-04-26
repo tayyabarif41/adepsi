@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./interaction-explorer-layout.component.scss']
 })
 export class InteractionExplorerLayoutComponent implements OnInit {
-
+  filterDropdown: boolean = false
   constructor() { }
 
   ngOnInit(): void {
